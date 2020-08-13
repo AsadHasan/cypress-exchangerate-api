@@ -4,3 +4,4 @@ cypress/plugins
 cypress/support
 cypress/videos
 .idea
+.eslintcache
