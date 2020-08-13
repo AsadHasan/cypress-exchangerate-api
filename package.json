@@ -1,0 +1,37 @@
+{
+  "name": "cypress-exhangerate-api",
+  "version": "1.0.0",
+  "description": "API tests for exchange rate API, using Cypress",
+  "scripts": {
+    "test": "npx cypress run --record"
+  },
+  "keywords": [
+    "Cypress",
+    "API",
+    "testing"
+  ],
+  "author": "Asad Hasan",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^4.12.1",
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-cypress": "^2.11.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-mocha": "^8.0.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "^2.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && npm test",
+      "pre-push": "npm test"
+    }
+  },
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
+  }
+}

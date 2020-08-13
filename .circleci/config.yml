@@ -1,0 +1,15 @@
+version: 2.1
+jobs:
+  cypress:
+    working_directory: ~/cypress-exchangerate-api
+    machine:
+      image: ubuntu-1604:202007-01
+    steps:
+      - checkout
+      - run:
+          name: Run Cypress tests
+          command: ./execute_tests.sh
+workflows:
+  cypress:
+    jobs:
+      - cypress
